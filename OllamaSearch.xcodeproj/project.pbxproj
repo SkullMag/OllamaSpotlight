@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D20639D92B7153370033449D /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = D20639D82B7153370033449D /* OllamaKit */; };
+		D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20639DA2B7168BA0033449D /* SearchModel.swift */; };
 		D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */; };
 		D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64792B71484B0095C5B7 /* ContentView.swift */; };
 		D22E647C2B71484E0095C5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647B2B71484E0095C5B7 /* Assets.xcassets */; };
 		D22E647F2B71484E0095C5B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */; };
+		D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E02B73C823008A32C6 /* AppDelegate.swift */; };
+		D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E22B73C856008A32C6 /* FloatingPanel.swift */; };
+		D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D20639DA2B7168BA0033449D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		D22E64742B71484B0095C5B7 /* OllamaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllamaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaSearchApp.swift; sourceTree = "<group>"; };
 		D22E64792B71484B0095C5B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D22E647B2B71484E0095C5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D22E64802B71484E0095C5B7 /* OllamaSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OllamaSearch.entitlements; sourceTree = "<group>"; };
+		D288F3E02B73C823008A32C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D288F3E22B73C856008A32C6 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
+		D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20639D92B7153370033449D /* OllamaKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +62,10 @@
 		D22E64762B71484B0095C5B7 /* OllamaSearch */ = {
 			isa = PBXGroup;
 			children = (
+				D288F3E92B73E202008A32C6 /* Models */,
+				D288F3E82B73E1ED008A32C6 /* Views */,
 				D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */,
-				D22E64792B71484B0095C5B7 /* ContentView.swift */,
+				D288F3E02B73C823008A32C6 /* AppDelegate.swift */,
 				D22E647B2B71484E0095C5B7 /* Assets.xcassets */,
 				D22E64802B71484E0095C5B7 /* OllamaSearch.entitlements */,
 				D22E647D2B71484E0095C5B7 /* Preview Content */,
@@ -67,6 +79,24 @@
 				D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D288F3E82B73E1ED008A32C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D288F3E22B73C856008A32C6 /* FloatingPanel.swift */,
+				D22E64792B71484B0095C5B7 /* ContentView.swift */,
+				D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D288F3E92B73E202008A32C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D20639DA2B7168BA0033449D /* SearchModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +115,9 @@
 			dependencies = (
 			);
 			name = OllamaSearch;
+			packageProductDependencies = (
+				D20639D82B7153370033449D /* OllamaKit */,
+			);
 			productName = OllamaSearch;
 			productReference = D22E64742B71484B0095C5B7 /* OllamaSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +146,9 @@
 				Base,
 			);
 			mainGroup = D22E646B2B71484B0095C5B7;
+			packageReferences = (
+				D20639D72B7153370033449D /* XCRemoteSwiftPackageReference "OllamaKit" */,
+			);
 			productRefGroup = D22E64752B71484B0095C5B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */,
+				D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */,
+				D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */,
 				D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */,
 				D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */,
+				D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +315,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OllamaSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = Q3NG4S4YWJ;
+				DEVELOPMENT_TEAM = 474P4587J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,7 +342,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"OllamaSearch/Preview Content\"";
-				DEVELOPMENT_TEAM = Q3NG4S4YWJ;
+				DEVELOPMENT_TEAM = 474P4587J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -341,6 +381,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D20639D72B7153370033449D /* XCRemoteSwiftPackageReference "OllamaKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kevinhermawan/OllamaKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D20639D82B7153370033449D /* OllamaKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D20639D72B7153370033449D /* XCRemoteSwiftPackageReference "OllamaKit" */;
+			productName = OllamaKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D22E646C2B71484B0095C5B7 /* Project object */;
 }
