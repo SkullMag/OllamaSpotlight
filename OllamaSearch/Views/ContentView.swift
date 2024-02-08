@@ -10,39 +10,39 @@ import AppKit
 
 
 struct ContentView: View {
-    @State private var prompt: String = ""
-    @StateObject var searchModel = OllamaSearchModel()
+    @State private var prompt: String = "where does llama live?"
+    @StateObject private var searchModel = OllamaSearchModel()
     
     @ViewBuilder
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer()
-            
-            VStack(alignment: .leading) {
-                TextHeaderView
+            if searchModel.isGenerating == nil {
+                Spacer()
                 
-                if (searchModel.isGenerating != nil) {
-                    TextEditorView
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding()
-                }
+                SearchFieldView
                 
-            }
-            
-            if (!(searchModel.isGenerating ?? true)) {
-                Button(action: copyToClipboard) {
-                    Label("Copy to Clipboard", systemImage: "doc.on.doc")
+                Spacer()
+            } else {
+                SearchFieldView
+                    .padding(.top)
+                
+                TextEditorView
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding([.top, .bottom])
+                
+                Spacer()
+                
+                if !searchModel.isGenerating! {
+                    ButtonsView
+                        .padding([.top, .bottom])
                 }
-                .buttonStyle(.borderless)
             }
-            
-            Spacer()
         }
         .padding([.leading, .trailing])
     }
     
-    // MARK: - TextHeaderView
-    private var TextHeaderView: some View {
+    // MARK: - SearchFieldView
+    private var SearchFieldView: some View {
         HStack(alignment: .center) {
             TextField("Where does llama live?", text: $prompt)
                 .textFieldStyle(.plain)
@@ -70,6 +70,20 @@ struct ContentView: View {
                 .scrollContentBackground(.hidden)
                 .background(.clear)
                 .scrollIndicators(.never)
+        }
+    }
+    
+    private var ButtonsView: some View {
+        HStack {
+            Button(action: copyToClipboard) {
+                Label("Copy to Clipboard", systemImage: "doc.on.doc")
+            }
+            .buttonStyle(.borderless)
+            
+            Button(action: {}) {
+                Label("Share", systemImage: "square.and.arrow.up")
+            }
+            .buttonStyle(.borderless)
         }
     }
     

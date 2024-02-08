@@ -18,11 +18,16 @@ class OllamaSearchModel: ObservableObject {
     
     @MainActor
     func generate(model: String, prompt: String) async {
+        // Check if server is on
         if !(await ollamaKit.reachable()) {
             return
         }
+        
+        // Clear previous data
         response = ""
         self.isGenerating = true
+        
+        // Start generation
         generation = ollamaKit.generate(data: OKGenerateRequestData(model: model, prompt: prompt))
             .sink { [weak self] completion in
                 switch (completion) {

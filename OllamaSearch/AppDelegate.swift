@@ -50,6 +50,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func menuButtonToggle() {
         NSApplication.shared.activate()
         entryPanel.makeKeyAndOrderFront(nil)
-        entryPanel.center()
     }
 }
