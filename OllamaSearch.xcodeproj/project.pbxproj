@@ -18,7 +18,6 @@
 		D26045202B780238006FBE6C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260451F2B780238006FBE6C /* SettingsView.swift */; };
 		D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E02B73C823008A32C6 /* AppDelegate.swift */; };
 		D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E22B73C856008A32C6 /* FloatingPanel.swift */; };
-		D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		D260451F2B780238006FBE6C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D288F3E02B73C823008A32C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D288F3E22B73C856008A32C6 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
-		D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 			children = (
 				D288F3E22B73C856008A32C6 /* FloatingPanel.swift */,
 				D22E64792B71484B0095C5B7 /* ContentView.swift */,
-				D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */,
 				D260451F2B780238006FBE6C /* SettingsView.swift */,
 			);
 			path = Views;
@@ -200,7 +197,6 @@
 				D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */,
 				D260451B2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift in Sources */,
 				D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */,
-				D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

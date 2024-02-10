@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.setActivationPolicy(.accessory)
         
         // Create the window and set the content view.
-        entryPanel = FloatingPanel(contentRect: NSRect(x: 0, y: 0, width: 512, height: 0), backing: .buffered, defer: false)
+        entryPanel = FloatingPanel(contentRect: NSRect(x: 0, y: 0, width: 700, height: 0), backing: .buffered, defer: false)
 
         entryPanel.contentView = NSHostingView(rootView: contentView)
 

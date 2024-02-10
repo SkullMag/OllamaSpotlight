@@ -11,11 +11,12 @@ import KeyboardShortcuts
 struct SettingsView: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Shortcuts:")
-                .font(.title2)
-            
-            Form {
-                KeyboardShortcuts.Recorder("Open search window: ", name: .openSearchWindow)
+            HStack {
+                Form {
+                    KeyboardShortcuts.Recorder("Hotkey:", name: .openSearchWindow)
+                        .font(.body)
+                }
+                Spacer()
             }
         }
         .padding()
@@ -24,4 +25,5 @@ struct SettingsView: View {
 
 #Preview {
     SettingsView()
+        .frame(width: 300)
 }

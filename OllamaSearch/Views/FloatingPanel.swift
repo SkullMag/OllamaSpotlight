@@ -7,6 +7,7 @@
 
 import AppKit
 
+// https://www.markusbodner.com/til/2021/02/08/create-a-spotlight/alfred-like-window-on-macos-with-swiftui/
 class FloatingPanel: NSPanel {
     init(contentRect: NSRect, backing: NSWindow.BackingStoreType, defer flag: Bool) {
         // Not sure if .titled does affect anything here. Kept it because I think it might help with accessibility but I did not test that.
@@ -18,6 +19,7 @@ class FloatingPanel: NSPanel {
         // Allow the pannel to be on top of almost all other windows
         isFloatingPanel = true
         level = .floating
+//        animationBehavior = .utilityWindow
 
         // Allow the pannel to appear in a fullscreen space
         collectionBehavior.insert(.fullScreenAuxiliary)

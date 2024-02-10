@@ -12,8 +12,9 @@ import KeyboardShortcuts
 struct OllamaSearchApp: App {
     @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
-        WindowGroup {
+        WindowGroup("Settings") {
             SettingsView()
+                .frame(minWidth: 300)
         }
     }
 }
