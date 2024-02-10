@@ -1,6 +1,6 @@
 //
 //  OllamaSearchModel.swift
-//  OllamaSearch
+//  OllamaSpotlight
 //
 //  Created by Oleg Rybalko on 05.02.2024.
 //

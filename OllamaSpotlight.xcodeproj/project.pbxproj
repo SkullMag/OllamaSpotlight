@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D20639D92B7153370033449D /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = D20639D82B7153370033449D /* OllamaKit */; };
 		D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20639DA2B7168BA0033449D /* SearchModel.swift */; };
-		D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */; };
+		D22E64782B71484B0095C5B7 /* OllamaSpotlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */; };
 		D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64792B71484B0095C5B7 /* ContentView.swift */; };
 		D22E647C2B71484E0095C5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647B2B71484E0095C5B7 /* Assets.xcassets */; };
 		D22E647F2B71484E0095C5B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */; };
@@ -22,12 +22,12 @@
 
 /* Begin PBXFileReference section */
 		D20639DA2B7168BA0033449D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
-		D22E64742B71484B0095C5B7 /* OllamaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllamaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaSearchApp.swift; sourceTree = "<group>"; };
+		D22E64742B71484B0095C5B7 /* OllamaSpotlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllamaSpotlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaSpotlightApp.swift; sourceTree = "<group>"; };
 		D22E64792B71484B0095C5B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D22E647B2B71484E0095C5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D22E64802B71484E0095C5B7 /* OllamaSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OllamaSearch.entitlements; sourceTree = "<group>"; };
+		D22E64802B71484E0095C5B7 /* OllamaSpotlight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OllamaSpotlight.entitlements; sourceTree = "<group>"; };
 		D260451A2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts.Name+Extension.swift"; sourceTree = "<group>"; };
 		D260451F2B780238006FBE6C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D288F3E02B73C823008A32C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		D22E646B2B71484B0095C5B7 = {
 			isa = PBXGroup;
 			children = (
-				D22E64762B71484B0095C5B7 /* OllamaSearch */,
+				D22E64762B71484B0095C5B7 /* OllamaSpotlight */,
 				D22E64752B71484B0095C5B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,24 +58,24 @@
 		D22E64752B71484B0095C5B7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D22E64742B71484B0095C5B7 /* OllamaSearch.app */,
+				D22E64742B71484B0095C5B7 /* OllamaSpotlight.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D22E64762B71484B0095C5B7 /* OllamaSearch */ = {
+		D22E64762B71484B0095C5B7 /* OllamaSpotlight */ = {
 			isa = PBXGroup;
 			children = (
 				D26045212B780642006FBE6C /* Extensions */,
 				D288F3E92B73E202008A32C6 /* Models */,
 				D288F3E82B73E1ED008A32C6 /* Views */,
-				D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */,
+				D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */,
 				D288F3E02B73C823008A32C6 /* AppDelegate.swift */,
 				D22E647B2B71484E0095C5B7 /* Assets.xcassets */,
-				D22E64802B71484E0095C5B7 /* OllamaSearch.entitlements */,
+				D22E64802B71484E0095C5B7 /* OllamaSpotlight.entitlements */,
 				D22E647D2B71484E0095C5B7 /* Preview Content */,
 			);
-			path = OllamaSearch;
+			path = OllamaSpotlight;
 			sourceTree = "<group>";
 		};
 		D22E647D2B71484E0095C5B7 /* Preview Content */ = {
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D22E64732B71484B0095C5B7 /* OllamaSearch */ = {
+		D22E64732B71484B0095C5B7 /* OllamaSpotlight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D22E64832B71484E0095C5B7 /* Build configuration list for PBXNativeTarget "OllamaSearch" */;
+			buildConfigurationList = D22E64832B71484E0095C5B7 /* Build configuration list for PBXNativeTarget "OllamaSpotlight" */;
 			buildPhases = (
 				D22E64702B71484B0095C5B7 /* Sources */,
 				D22E64712B71484B0095C5B7 /* Frameworks */,
@@ -127,13 +127,13 @@
 			);
 			dependencies = (
 			);
-			name = OllamaSearch;
+			name = OllamaSpotlight;
 			packageProductDependencies = (
 				D20639D82B7153370033449D /* OllamaKit */,
 				D260451D2B7801FA006FBE6C /* KeyboardShortcuts */,
 			);
 			productName = OllamaSearch;
-			productReference = D22E64742B71484B0095C5B7 /* OllamaSearch.app */;
+			productReference = D22E64742B71484B0095C5B7 /* OllamaSpotlight.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -151,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D22E646F2B71484B0095C5B7 /* Build configuration list for PBXProject "OllamaSearch" */;
+			buildConfigurationList = D22E646F2B71484B0095C5B7 /* Build configuration list for PBXProject "OllamaSpotlight" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -168,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D22E64732B71484B0095C5B7 /* OllamaSearch */,
+				D22E64732B71484B0095C5B7 /* OllamaSpotlight */,
 			);
 		};
 /* End PBXProject section */
@@ -196,7 +196,7 @@
 				D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */,
 				D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */,
 				D260451B2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift in Sources */,
-				D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */,
+				D22E64782B71484B0095C5B7 /* OllamaSpotlightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,11 +326,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OllamaSearch/OllamaSearch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OllamaSpotlight/OllamaSpotlight.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OllamaSearch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OllamaSpotlight/Preview Content\"";
 				DEVELOPMENT_TEAM = 474P4587J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -341,7 +342,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rybalkooleg.OllamaSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rybalkooleg.OllamaSpotlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,11 +354,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = OllamaSearch/OllamaSearch.entitlements;
+				CODE_SIGN_ENTITLEMENTS = OllamaSpotlight/OllamaSpotlight.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OllamaSearch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"OllamaSpotlight/Preview Content\"";
 				DEVELOPMENT_TEAM = 474P4587J8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -368,7 +370,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rybalkooleg.OllamaSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rybalkooleg.OllamaSpotlight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -378,7 +380,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D22E646F2B71484B0095C5B7 /* Build configuration list for PBXProject "OllamaSearch" */ = {
+		D22E646F2B71484B0095C5B7 /* Build configuration list for PBXProject "OllamaSpotlight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D22E64812B71484E0095C5B7 /* Debug */,
@@ -387,7 +389,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D22E64832B71484E0095C5B7 /* Build configuration list for PBXNativeTarget "OllamaSearch" */ = {
+		D22E64832B71484E0095C5B7 /* Build configuration list for PBXNativeTarget "OllamaSpotlight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D22E64842B71484E0095C5B7 /* Debug */,
