@@ -79,12 +79,28 @@ struct ContentView: View {
     private var ButtonsView: some View {
         HStack {
             Button(action: copyToClipboard) {
-                Label("Copy to Clipboard", systemImage: "doc.on.doc")
+                Label("Copy", systemImage: "doc.on.doc")
             }
             .buttonStyle(.borderless)
+            .padding([.trailing])
             
             Button(action: {}) {
                 Label("Share", systemImage: "square.and.arrow.up")
+            }
+            .buttonStyle(.borderless)
+            .padding([.trailing])
+
+            Button(action: {
+                // Remove the response
+                searchModel.clear()
+
+                // Resize the window
+                if let window = NSApp.mainWindow {
+                    let frame = window.frame
+                    window.setFrame(NSRect(x: frame.minX, y: frame.maxY, width: frame.width, height: 10), display: true, animate: false)
+                }
+            }) {
+                Label("Clear", systemImage: "delete.left")
             }
             .buttonStyle(.borderless)
         }

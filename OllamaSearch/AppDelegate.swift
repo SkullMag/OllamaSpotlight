@@ -47,7 +47,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApp.activate()
         
         KeyboardShortcuts.onKeyUp(for: .openSearchWindow) {
-            print("open window")
             NSApp.activate()
         }
     }

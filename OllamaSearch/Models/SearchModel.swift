@@ -38,5 +38,10 @@ class OllamaSearchModel: ObservableObject {
                 self?.response += resp.response
             }
     }
+
+    func clear() {
+        response = ""
+        isGenerating = nil
+    }
 }
 
