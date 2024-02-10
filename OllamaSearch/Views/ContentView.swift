@@ -10,8 +10,8 @@ import AppKit
 
 
 struct ContentView: View {
-    @State private var prompt: String = "where does llama live?"
     @StateObject private var searchModel = OllamaSearchModel()
+    @State private var prompt: String = ""
     
     @ViewBuilder
     var body: some View {
@@ -44,7 +44,10 @@ struct ContentView: View {
     // MARK: - SearchFieldView
     private var SearchFieldView: some View {
         HStack(alignment: .center) {
-            TextField("Where does llama live?", text: $prompt)
+            Image(systemName: "magnifyingglass")
+                .font(.title)
+            
+            TextField("Ollama Search", text: $prompt)
                 .textFieldStyle(.plain)
                 .font(.title)
                 .onSubmit {

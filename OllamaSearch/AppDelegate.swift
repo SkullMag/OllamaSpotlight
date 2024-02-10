@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Check if status button is available
         if let btn = statusItem?.button {
-            btn.image = NSImage(systemSymbolName: "hammer", accessibilityDescription: nil)
+            btn.image = NSImage(systemSymbolName: "magnifyingglass", accessibilityDescription: nil)
             btn.action = #selector(menuButtonToggle)
         }
         

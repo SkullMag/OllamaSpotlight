@@ -19,7 +19,6 @@ class FloatingPanel: NSPanel {
         // Allow the pannel to be on top of almost all other windows
         isFloatingPanel = true
         level = .floating
-//        animationBehavior = .utilityWindow
 
         // Allow the pannel to appear in a fullscreen space
         collectionBehavior.insert(.fullScreenAuxiliary)
