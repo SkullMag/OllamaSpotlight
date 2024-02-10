@@ -60,6 +60,7 @@ struct ContentView: View {
                 ProgressView()
                     .progressViewStyle(.circular)
                     .controlSize(.small)
+                    .padding(.leading)
             }
         }
     }
@@ -91,8 +92,9 @@ struct ContentView: View {
             .padding([.trailing])
 
             Button(action: {
-                // Remove the response
+                // Remove the response and the prompt
                 searchModel.clear()
+                prompt = ""
 
                 // Resize the window
                 if let window = NSApp.mainWindow {
