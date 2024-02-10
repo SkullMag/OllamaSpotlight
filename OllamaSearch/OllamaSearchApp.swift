@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import KeyboardShortcuts
 
 @main
 struct OllamaSearchApp: App {
     @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
-        Settings {}
+        WindowGroup {
+            SettingsView()
+        }
     }
 }

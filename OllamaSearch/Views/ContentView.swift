@@ -66,10 +66,10 @@ struct ContentView: View {
         VStack(alignment: .leading) {
             TextEditor(text: $searchModel.response)
                 .font(.title2)
-                .frame(maxHeight: 300)
+                .frame(maxHeight: 500)
                 .scrollContentBackground(.hidden)
                 .background(.clear)
-                .scrollIndicators(.never)
+                .scrollIndicators(.automatic)
         }
     }
     

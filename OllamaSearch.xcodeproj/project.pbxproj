@@ -13,6 +13,9 @@
 		D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64792B71484B0095C5B7 /* ContentView.swift */; };
 		D22E647C2B71484E0095C5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647B2B71484E0095C5B7 /* Assets.xcassets */; };
 		D22E647F2B71484E0095C5B7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */; };
+		D260451B2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260451A2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift */; };
+		D260451E2B7801FA006FBE6C /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = D260451D2B7801FA006FBE6C /* KeyboardShortcuts */; };
+		D26045202B780238006FBE6C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260451F2B780238006FBE6C /* SettingsView.swift */; };
 		D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E02B73C823008A32C6 /* AppDelegate.swift */; };
 		D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E22B73C856008A32C6 /* FloatingPanel.swift */; };
 		D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */; };
@@ -26,6 +29,8 @@
 		D22E647B2B71484E0095C5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D22E647E2B71484E0095C5B7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D22E64802B71484E0095C5B7 /* OllamaSearch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OllamaSearch.entitlements; sourceTree = "<group>"; };
+		D260451A2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyboardShortcuts.Name+Extension.swift"; sourceTree = "<group>"; };
+		D260451F2B780238006FBE6C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D288F3E02B73C823008A32C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D288F3E22B73C856008A32C6 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
 		D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
@@ -37,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20639D92B7153370033449D /* OllamaKit in Frameworks */,
+				D260451E2B7801FA006FBE6C /* KeyboardShortcuts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +68,7 @@
 		D22E64762B71484B0095C5B7 /* OllamaSearch */ = {
 			isa = PBXGroup;
 			children = (
+				D26045212B780642006FBE6C /* Extensions */,
 				D288F3E92B73E202008A32C6 /* Models */,
 				D288F3E82B73E1ED008A32C6 /* Views */,
 				D22E64772B71484B0095C5B7 /* OllamaSearchApp.swift */,
@@ -81,12 +88,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D26045212B780642006FBE6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D260451A2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		D288F3E82B73E1ED008A32C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D288F3E22B73C856008A32C6 /* FloatingPanel.swift */,
 				D22E64792B71484B0095C5B7 /* ContentView.swift */,
 				D288F3E62B73DD92008A32C6 /* VisualEffectView.swift */,
+				D260451F2B780238006FBE6C /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,6 +133,7 @@
 			name = OllamaSearch;
 			packageProductDependencies = (
 				D20639D82B7153370033449D /* OllamaKit */,
+				D260451D2B7801FA006FBE6C /* KeyboardShortcuts */,
 			);
 			productName = OllamaSearch;
 			productReference = D22E64742B71484B0095C5B7 /* OllamaSearch.app */;
@@ -148,6 +165,7 @@
 			mainGroup = D22E646B2B71484B0095C5B7;
 			packageReferences = (
 				D20639D72B7153370033449D /* XCRemoteSwiftPackageReference "OllamaKit" */,
+				D260451C2B7801FA006FBE6C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
 			);
 			productRefGroup = D22E64752B71484B0095C5B7 /* Products */;
 			projectDirPath = "";
@@ -176,9 +194,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */,
+				D26045202B780238006FBE6C /* SettingsView.swift in Sources */,
 				D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */,
 				D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */,
 				D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */,
+				D260451B2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift in Sources */,
 				D22E64782B71484B0095C5B7 /* OllamaSearchApp.swift in Sources */,
 				D288F3E72B73DD92008A32C6 /* VisualEffectView.swift in Sources */,
 			);
@@ -391,6 +411,14 @@
 				minimumVersion = 3.0.1;
 			};
 		};
+		D260451C2B7801FA006FBE6C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.17.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -398,6 +426,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D20639D72B7153370033449D /* XCRemoteSwiftPackageReference "OllamaKit" */;
 			productName = OllamaKit;
+		};
+		D260451D2B7801FA006FBE6C /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D260451C2B7801FA006FBE6C /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

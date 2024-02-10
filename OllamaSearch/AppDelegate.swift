@@ -6,6 +6,7 @@
 //
 
 import AppKit
+import KeyboardShortcuts
 import SwiftUI
 
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -21,7 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             .ignoresSafeArea(.all)
     
         // It is needed to activate window on menu button click
-        NSApplication.shared.setActivationPolicy(.accessory)
+        NSApp.setActivationPolicy(.accessory)
         
         // Create the window and set the content view.
         entryPanel = FloatingPanel(contentRect: NSRect(x: 0, y: 0, width: 512, height: 0), backing: .buffered, defer: false)
@@ -43,12 +44,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             btn.action = #selector(menuButtonToggle)
         }
         
-        NSApplication.shared.activate()
+        NSApp.activate()
+        
+        KeyboardShortcuts.onKeyUp(for: .openSearchWindow) {
+            print("open window")
+            NSApp.activate()
+        }
     }
     
     @objc
     private func menuButtonToggle() {
-        NSApplication.shared.activate()
+        NSApp.activate()
         entryPanel.makeKeyAndOrderFront(nil)
     }
 }
