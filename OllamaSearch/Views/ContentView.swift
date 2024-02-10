@@ -85,12 +85,6 @@ struct ContentView: View {
             .buttonStyle(.borderless)
             .padding([.trailing])
             
-            Button(action: {}) {
-                Label("Share", systemImage: "square.and.arrow.up")
-            }
-            .buttonStyle(.borderless)
-            .padding([.trailing])
-
             Button(action: {
                 // Remove the response and the prompt
                 searchModel.clear()
