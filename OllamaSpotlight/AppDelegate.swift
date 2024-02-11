@@ -13,6 +13,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var entryPanel: FloatingPanel!
     var statusItem: NSStatusItem?
+    var ollamaModel = OllamaModel()
+    var settings = Settings()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create the SwiftUI view that provides the window contents.
@@ -20,6 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let contentView = ContentView()
             .frame(minWidth: 200)
             .ignoresSafeArea(.all)
+            .environment(ollamaModel)
+            .environment(settings)
     
         // It is needed to activate window on menu button click
         NSApp.setActivationPolicy(.accessory)

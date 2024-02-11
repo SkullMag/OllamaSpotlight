@@ -9,12 +9,26 @@ import SwiftUI
 import KeyboardShortcuts
 
 struct SettingsView: View {
+    @EnvironmentObject var ollamaModel: OllamaModel
+    @EnvironmentObject var settings: Settings
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Form {
                     KeyboardShortcuts.Recorder("Hotkey:", name: .openSearchWindow)
                         .font(.body)
+                    
+                    Picker("Model:", selection: $settings.selectedModel) {
+                        ForEach(ollamaModel.availableModels, id: \.self) { name in
+                            Text(name)
+                        }
+                    }
+                    .pickerStyle(.menu)
+                    .onChange(of: settings.selectedModel) {
+                        UserDefaults.standard.setValue(settings.selectedModel, forKey: "ollamaSpotlightModel")
+                        
+                    }
                 }
                 Spacer()
             }
@@ -26,4 +40,6 @@ struct SettingsView: View {
 #Preview {
     SettingsView()
         .frame(width: 300)
+        .environment(OllamaModel())
+        .environment(Settings())
 }

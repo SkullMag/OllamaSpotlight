@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KeyboardShortcuts
 
 @main
 struct OllamaSpotlightApp: App {
@@ -15,6 +14,8 @@ struct OllamaSpotlightApp: App {
         WindowGroup("Settings") {
             SettingsView()
                 .frame(minWidth: 300)
+                .environment(appDelegate.ollamaModel)
+                .environment(appDelegate.settings)
         }
     }
 }

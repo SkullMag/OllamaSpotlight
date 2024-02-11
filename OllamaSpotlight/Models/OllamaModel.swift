@@ -9,12 +9,18 @@ import Combine
 import OllamaKit
 import SwiftUI
 
-class OllamaSearchModel: ObservableObject {
+class OllamaModel: ObservableObject, Observable {
     @Published var response: String = ""
     @Published var isGenerating: Bool?
+    @Published var availableModels: Array<String> = []
     
     private var ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
     private var generation: AnyCancellable?
+    private var models: AnyCancellable?
+    
+    init() {
+        fetchModels()
+    }
     
     @MainActor
     func generate(model: String, prompt: String) async {
@@ -30,6 +36,7 @@ class OllamaSearchModel: ObservableObject {
         // Start generation
         generation = ollamaKit.generate(data: OKGenerateRequestData(model: model, prompt: prompt))
             .sink { [weak self] completion in
+                // TODO: handle errors
                 switch (completion) {
                 default:
                     self?.isGenerating = false
@@ -42,6 +49,15 @@ class OllamaSearchModel: ObservableObject {
     func clear() {
         response = ""
         isGenerating = nil
+    }
+    
+    func fetchModels() {
+        models = ollamaKit.models().sink { completion in
+            // TODO: handle errors
+        } receiveValue: { [weak self] resp in
+            self?.availableModels = resp.models.map { $0.name }
+        }
+
     }
 }
 
