@@ -11,7 +11,7 @@ class Settings: ObservableObject, Observable {
     @Published var selectedModel: String = "llama2:latest"
     private let userDefaultsKey = "ollamaSpotlightModel"
     
-    init () {
+    init() {
         if let model = UserDefaults.standard.value(forKey: userDefaultsKey) as? String {
             selectedModel = model
         }

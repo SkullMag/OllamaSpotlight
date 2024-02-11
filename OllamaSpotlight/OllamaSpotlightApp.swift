@@ -17,5 +17,6 @@ struct OllamaSpotlightApp: App {
                 .environment(appDelegate.ollamaModel)
                 .environment(appDelegate.settings)
         }
+        .windowResizability(.contentSize)
     }
 }

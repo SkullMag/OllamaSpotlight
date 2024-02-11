@@ -14,22 +14,19 @@ struct SettingsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Form {
-                    KeyboardShortcuts.Recorder("Hotkey:", name: .openSearchWindow)
-                        .font(.body)
-                    
-                    Picker("Model:", selection: $settings.selectedModel) {
-                        ForEach(ollamaModel.availableModels, id: \.self) { name in
-                            Text(name)
-                        }
-                    }
-                    .pickerStyle(.menu)
-                    .onChange(of: settings.selectedModel) {
-                        settings.update(model: settings.selectedModel)
+            Form {
+                KeyboardShortcuts.Recorder("Hotkey:", name: .openSearchWindow)
+                    .font(.body)
+                
+                Picker("Model:", selection: $settings.selectedModel) {
+                    ForEach(ollamaModel.availableModels, id: \.self) { name in
+                        Text(name)
                     }
                 }
-                Spacer()
+                .pickerStyle(.menu)
+                .onChange(of: settings.selectedModel) {
+                    settings.update(model: settings.selectedModel)
+                }
             }
         }
         .padding()

@@ -57,7 +57,6 @@ struct ContentView: View {
                         await ollamaModel.generate(model: settings.selectedModel, prompt: prompt)
                     }
                 }
-            
 
             if (ollamaModel.isGenerating ?? false) {
                 ProgressView()
