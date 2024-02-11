@@ -26,8 +26,7 @@ struct SettingsView: View {
                     }
                     .pickerStyle(.menu)
                     .onChange(of: settings.selectedModel) {
-                        UserDefaults.standard.setValue(settings.selectedModel, forKey: "ollamaSpotlightModel")
-                        
+                        settings.update(model: settings.selectedModel)
                     }
                 }
                 Spacer()
