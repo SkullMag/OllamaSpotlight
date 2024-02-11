@@ -13,10 +13,18 @@ struct HistoryView: View {
     
     var body: some View {
         NavigationStack {
-            HistoryListView
-                .navigationDestination(item: $selectedItem) { item in
-                    HistoryItemView(item)
+            if history.items.count == 0 {
+                ZStack(alignment: .center) {
+                    Text("Your history is empty")
+                        .foregroundStyle(.secondary)
+                        .padding()
                 }
+            } else {
+                HistoryListView
+                    .navigationDestination(item: $selectedItem) { item in
+                        HistoryItemView(item)
+                    }
+            }
         }
     }
     
