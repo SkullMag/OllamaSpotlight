@@ -11,6 +11,7 @@ import KeyboardShortcuts
 struct SettingsView: View {
     @EnvironmentObject var ollamaModel: OllamaModel
     @EnvironmentObject var settings: Settings
+    @Environment(\.openWindow) private var openWindow
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,6 +29,14 @@ struct SettingsView: View {
                     settings.update(model: settings.selectedModel)
                 }
             }
+            
+            Divider()
+            
+            Button("History", systemImage: "book") {
+                openWindow(id: "history")
+            }
+            .buttonStyle(.borderless)
+            .frame(maxWidth: .infinity)
         }
         .padding()
     }

@@ -9,7 +9,7 @@ import SwiftUI
 import AppKit
 
 
-struct ContentView: View {
+struct SpotlightView: View {
     @EnvironmentObject var ollamaModel: OllamaModel
     @EnvironmentObject var settings: Settings
     @State private var prompt: String = ""
@@ -74,14 +74,14 @@ struct ContentView: View {
                 .font(.title2)
                 .frame(maxHeight: 500)
                 .scrollContentBackground(.hidden)
-                .background(.clear)
                 .scrollIndicators(.automatic)
         }
     }
     
+    // MARK: - ButtonsView
     private var ButtonsView: some View {
         HStack {
-            Button(action: copyToClipboard) {
+            Button(action: ollamaModel.response.copyToPasteboard) {
                 Label("Copy", systemImage: "doc.on.doc")
             }
             .buttonStyle(.borderless)
@@ -93,7 +93,7 @@ struct ContentView: View {
                 prompt = ""
 
                 // Resize the window
-                if let window = NSApp.mainWindow {
+                if let window = NSApp.keyWindow {
                     let frame = window.frame
                     window.setFrame(NSRect(x: frame.minX, y: frame.maxY, width: frame.width, height: 10), display: true, animate: false)
                 }
@@ -103,14 +103,8 @@ struct ContentView: View {
             .buttonStyle(.borderless)
         }
     }
-    
-    private func copyToClipboard() {
-        let pasteboard = NSPasteboard.general
-        pasteboard.declareTypes([.string], owner: nil)
-        pasteboard.setString(ollamaModel.response, forType: .string)
-    }
 }
 
 #Preview {
-    ContentView()
+    SpotlightView()
 }
