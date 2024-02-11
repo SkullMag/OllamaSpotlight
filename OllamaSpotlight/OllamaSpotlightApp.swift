@@ -11,11 +11,20 @@ import SwiftUI
 struct OllamaSpotlightApp: App {
     @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
     var body: some Scene {
-        WindowGroup("Settings") {
+        WindowGroup("Settings", id: "settings") {
             SettingsView()
                 .frame(minWidth: 300)
                 .environment(appDelegate.ollamaModel)
                 .environment(appDelegate.settings)
         }
+        .windowResizability(.contentMinSize)
+        
+        WindowGroup("History", id: "history") {
+            HistoryView()
+                .frame(minWidth: 300)
+                .environment(appDelegate.history)
+        }
+        .windowResizability(.contentMinSize)
+        .commandsRemoved()
     }
 }

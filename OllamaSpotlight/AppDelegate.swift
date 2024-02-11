@@ -13,13 +13,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var entryPanel: FloatingPanel!
     var statusItem: NSStatusItem?
+    var history = History()
     var ollamaModel = OllamaModel()
     var settings = Settings()
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create the SwiftUI view that provides the window contents.
         // I've opted to ignore top safe area as well, since we're hiding the traffic icons
-        let contentView = ContentView()
+        ollamaModel.inject(history)
+        let contentView = SpotlightView()
             .frame(minWidth: 200)
             .ignoresSafeArea(.all)
             .environment(ollamaModel)

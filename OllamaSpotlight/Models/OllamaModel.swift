@@ -17,6 +17,7 @@ class OllamaModel: ObservableObject, Observable {
     private var ollamaKit = OllamaKit(baseURL: URL(string: "http://localhost:11434")!)
     private var generation: AnyCancellable?
     private var models: AnyCancellable?
+    private var history: History?
     
     init() {
         fetchModels()
@@ -40,6 +41,11 @@ class OllamaModel: ObservableObject, Observable {
                 switch (completion) {
                 default:
                     self?.isGenerating = false
+                    
+                    // Save the response in history
+                    if let history = self?.history, let response = self?.response {
+                        history.save(model: model, prompt: prompt, response: response)
+                    }
                 }
             } receiveValue: { [weak self ] resp in
                 self?.response += resp.response
@@ -57,7 +63,10 @@ class OllamaModel: ObservableObject, Observable {
         } receiveValue: { [weak self] resp in
             self?.availableModels = resp.models.map { $0.name }
         }
-
+    }
+    
+    func inject(_ history: History) {
+        self.history = history
     }
 }
 
