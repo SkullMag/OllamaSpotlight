@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D20639D92B7153370033449D /* OllamaKit in Frameworks */ = {isa = PBXBuildFile; productRef = D20639D82B7153370033449D /* OllamaKit */; };
-		D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20639DA2B7168BA0033449D /* SearchModel.swift */; };
+		D20639DB2B7168BA0033449D /* OllamaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20639DA2B7168BA0033449D /* OllamaModel.swift */; };
 		D22E64782B71484B0095C5B7 /* OllamaSpotlightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */; };
 		D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D22E64792B71484B0095C5B7 /* ContentView.swift */; };
 		D22E647C2B71484E0095C5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D22E647B2B71484E0095C5B7 /* Assets.xcassets */; };
@@ -18,10 +18,11 @@
 		D26045202B780238006FBE6C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D260451F2B780238006FBE6C /* SettingsView.swift */; };
 		D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E02B73C823008A32C6 /* AppDelegate.swift */; };
 		D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D288F3E22B73C856008A32C6 /* FloatingPanel.swift */; };
+		D2C177742B78CF8A0045FB3B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C177732B78CF8A0045FB3B /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D20639DA2B7168BA0033449D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		D20639DA2B7168BA0033449D /* OllamaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaModel.swift; sourceTree = "<group>"; };
 		D22E64742B71484B0095C5B7 /* OllamaSpotlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OllamaSpotlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OllamaSpotlightApp.swift; sourceTree = "<group>"; };
 		D22E64792B71484B0095C5B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +33,7 @@
 		D260451F2B780238006FBE6C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D288F3E02B73C823008A32C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D288F3E22B73C856008A32C6 /* FloatingPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanel.swift; sourceTree = "<group>"; };
+		D2C177732B78CF8A0045FB3B /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				D288F3E82B73E1ED008A32C6 /* Views */,
 				D22E64772B71484B0095C5B7 /* OllamaSpotlightApp.swift */,
 				D288F3E02B73C823008A32C6 /* AppDelegate.swift */,
+				D2C177732B78CF8A0045FB3B /* Settings.swift */,
 				D22E647B2B71484E0095C5B7 /* Assets.xcassets */,
 				D22E64802B71484E0095C5B7 /* OllamaSpotlight.entitlements */,
 				D22E647D2B71484E0095C5B7 /* Preview Content */,
@@ -107,7 +110,7 @@
 		D288F3E92B73E202008A32C6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D20639DA2B7168BA0033449D /* SearchModel.swift */,
+				D20639DA2B7168BA0033449D /* OllamaModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,9 +196,10 @@
 				D288F3E12B73C823008A32C6 /* AppDelegate.swift in Sources */,
 				D26045202B780238006FBE6C /* SettingsView.swift in Sources */,
 				D288F3E32B73C856008A32C6 /* FloatingPanel.swift in Sources */,
-				D20639DB2B7168BA0033449D /* SearchModel.swift in Sources */,
+				D20639DB2B7168BA0033449D /* OllamaModel.swift in Sources */,
 				D22E647A2B71484B0095C5B7 /* ContentView.swift in Sources */,
 				D260451B2B7801D4006FBE6C /* KeyboardShortcuts.Name+Extension.swift in Sources */,
+				D2C177742B78CF8A0045FB3B /* Settings.swift in Sources */,
 				D22E64782B71484B0095C5B7 /* OllamaSpotlightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

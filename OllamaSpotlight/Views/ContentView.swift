@@ -10,13 +10,15 @@ import AppKit
 
 
 struct ContentView: View {
-    @StateObject private var searchModel = OllamaSearchModel()
+    @EnvironmentObject var ollamaModel: OllamaModel
+    @EnvironmentObject var settings: Settings
     @State private var prompt: String = ""
+    @State private var selectedModel: String = ""
     
     @ViewBuilder
     var body: some View {
         VStack(alignment: .leading) {
-            if searchModel.isGenerating == nil {
+            if ollamaModel.isGenerating == nil {
                 Spacer()
                 
                 SearchFieldView
@@ -32,7 +34,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                if !searchModel.isGenerating! {
+                if !ollamaModel.isGenerating! {
                     ButtonsView
                         .padding([.top, .bottom])
                 }
@@ -52,11 +54,12 @@ struct ContentView: View {
                 .font(.title)
                 .onSubmit {
                     Task {
-                        await searchModel.generate(model: "llama2:7b", prompt: prompt)
+                        await ollamaModel.generate(model: settings.selectedModel, prompt: prompt)
                     }
                 }
             
-            if (searchModel.isGenerating ?? false) {
+
+            if (ollamaModel.isGenerating ?? false) {
                 ProgressView()
                     .progressViewStyle(.circular)
                     .controlSize(.small)
@@ -68,7 +71,7 @@ struct ContentView: View {
     // MARK: - TextEditorView
     private var TextEditorView: some View {
         VStack(alignment: .leading) {
-            TextEditor(text: $searchModel.response)
+            TextEditor(text: $ollamaModel.response)
                 .font(.title2)
                 .frame(maxHeight: 500)
                 .scrollContentBackground(.hidden)
@@ -87,7 +90,7 @@ struct ContentView: View {
             
             Button(action: {
                 // Remove the response and the prompt
-                searchModel.clear()
+                ollamaModel.clear()
                 prompt = ""
 
                 // Resize the window
@@ -105,7 +108,7 @@ struct ContentView: View {
     private func copyToClipboard() {
         let pasteboard = NSPasteboard.general
         pasteboard.declareTypes([.string], owner: nil)
-        pasteboard.setString(searchModel.response, forType: .string)
+        pasteboard.setString(ollamaModel.response, forType: .string)
     }
 }
 
